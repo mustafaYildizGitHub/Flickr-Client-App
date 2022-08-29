@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		7535CDDF28BBDF280017AE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7535CDDE28BBDF280017AE2E /* AppDelegate.swift */; };
 		7535CDE128BBDF280017AE2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7535CDE028BBDF280017AE2E /* SceneDelegate.swift */; };
-		7535CDE328BBDF280017AE2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7535CDE228BBDF280017AE2E /* ViewController.swift */; };
+		7535CDE328BBDF280017AE2E /* RecenPhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7535CDE228BBDF280017AE2E /* RecenPhotosTableViewController.swift */; };
 		7535CDE628BBDF280017AE2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7535CDE428BBDF280017AE2E /* Main.storyboard */; };
 		7535CDE828BBDF290017AE2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7535CDE728BBDF290017AE2E /* Assets.xcassets */; };
 		7535CDEB28BBDF290017AE2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7535CDE928BBDF290017AE2E /* LaunchScreen.storyboard */; };
+		7535CDF328BBE52B0017AE2E /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7535CDF228BBE52B0017AE2E /* PhotoTableViewCell.swift */; };
+		7535CDF528BC11F00017AE2E /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7535CDF428BC11F00017AE2E /* PhotoDetailViewController.swift */; };
+		75FC05B428BCE43A007E5BEA /* PhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FC05B328BCE43A007E5BEA /* PhotosResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7535CDDB28BBDF280017AE2E /* Flickr Client App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flickr Client App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7535CDDE28BBDF280017AE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7535CDE028BBDF280017AE2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7535CDE228BBDF280017AE2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7535CDE228BBDF280017AE2E /* RecenPhotosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecenPhotosTableViewController.swift; sourceTree = "<group>"; };
 		7535CDE528BBDF280017AE2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7535CDE728BBDF290017AE2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7535CDEA28BBDF290017AE2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7535CDEC28BBDF290017AE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7535CDF228BBE52B0017AE2E /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		7535CDF428BC11F00017AE2E /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		75FC05B328BCE43A007E5BEA /* PhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,26 @@
 		7535CDDD28BBDF280017AE2E /* Flickr Client App */ = {
 			isa = PBXGroup;
 			children = (
+				75FC05B228BCD98E007E5BEA /* Model */,
 				7535CDDE28BBDF280017AE2E /* AppDelegate.swift */,
 				7535CDE028BBDF280017AE2E /* SceneDelegate.swift */,
-				7535CDE228BBDF280017AE2E /* ViewController.swift */,
+				7535CDE228BBDF280017AE2E /* RecenPhotosTableViewController.swift */,
 				7535CDE428BBDF280017AE2E /* Main.storyboard */,
 				7535CDE728BBDF290017AE2E /* Assets.xcassets */,
 				7535CDE928BBDF290017AE2E /* LaunchScreen.storyboard */,
 				7535CDEC28BBDF290017AE2E /* Info.plist */,
+				7535CDF228BBE52B0017AE2E /* PhotoTableViewCell.swift */,
+				7535CDF428BC11F00017AE2E /* PhotoDetailViewController.swift */,
 			);
 			path = "Flickr Client App";
+			sourceTree = "<group>";
+		};
+		75FC05B228BCD98E007E5BEA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75FC05B328BCE43A007E5BEA /* PhotosResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7535CDE328BBDF280017AE2E /* ViewController.swift in Sources */,
+				7535CDF328BBE52B0017AE2E /* PhotoTableViewCell.swift in Sources */,
+				7535CDE328BBDF280017AE2E /* RecenPhotosTableViewController.swift in Sources */,
 				7535CDDF28BBDF280017AE2E /* AppDelegate.swift in Sources */,
+				75FC05B428BCE43A007E5BEA /* PhotosResponse.swift in Sources */,
+				7535CDF528BC11F00017AE2E /* PhotoDetailViewController.swift in Sources */,
 				7535CDE128BBDF280017AE2E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +313,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,7 +325,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,6 +342,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,7 +354,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
